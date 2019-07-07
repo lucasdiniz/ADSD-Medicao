@@ -1,0 +1,54 @@
+MacBook-Air-de-Lucas:VIDEOS lucasdiniz$ time ./ffmpeg -i A\ short\ ocean\ video\ \(1\).mp4 A\ short\ ocean\ video\ \(1\).mpeg
+ffmpeg version N-94155-gbe1643be31-tessus  https://evermeet.cx/ffmpeg/  Copyright (c) 2000-2019 the FFmpeg developers
+  built with Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+  configuration: --cc=/usr/bin/clang --prefix=/opt/ffmpeg --extra-version=tessus --enable-avisynth --enable-fontconfig --enable-gpl --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libfreetype --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-version3 --pkg-config-flags=--static --disable-ffplay
+  libavutil      56. 30.100 / 56. 30.100
+  libavcodec     58. 53.101 / 58. 53.101
+  libavformat    58. 28.101 / 58. 28.101
+  libavdevice    58.  7.100 / 58.  7.100
+  libavfilter     7. 56.100 /  7. 56.100
+  libswscale      5.  4.101 /  5.  4.101
+  libswresample   3.  4.100 /  3.  4.100
+  libpostproc    55.  4.100 / 55.  4.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'A short ocean video (1).mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.27.103
+  Duration: 00:00:12.70, start: 0.000000, bitrate: 1935 kb/s
+    Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p, 1280x674 [SAR 1:1 DAR 640:337], 1820 kb/s, 24 fps, 24 tbr, 90k tbn, 48 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 125 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg1video (native))
+  Stream #0:1 -> #0:1 (aac (native) -> mp2 (native))
+Press [q] to stop, [?] for help
+[mpeg @ 0x7ff6c7800800] VBV buffer size not set, using default size of 230KB
+If you want the mpeg file to be compliant to some specification
+Like DVD, VCD or others, make sure you set the correct buffer size
+Output #0, mpeg, to 'A short ocean video (1).mpeg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.28.101
+    Stream #0:0(und): Video: mpeg1video, yuv420p, 1280x674 [SAR 1:1 DAR 640:337], q=2-31, 200 kb/s, 24 fps, 90k tbn, 24 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc58.53.101 mpeg1video
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: -1
+    Stream #0:1(und): Audio: mp2, 44100 Hz, stereo, s16, 384 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      encoder         : Lavc58.53.101 mp2
+frame=  302 fps=209 q=31.0 Lsize=    1810kB time=00:00:12.71 bitrate=1166.5kbits/s speed=8.78x    
+video:1199kB audio:596kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.826604%
+
+real	0m1.503s
+user	0m3.839s
+sys	0m0.135s
